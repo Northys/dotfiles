@@ -28,3 +28,4 @@
   d = diff
   dc = diff --cached
   l = log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit
+  ulci=!FN=docs/releaseDescription/`date +%Y%m%d-%H%M`_`git rev-parse --abbrev-ref HEAD` && vi $FN && git add $FN && git commit
