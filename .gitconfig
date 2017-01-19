@@ -3,7 +3,7 @@
   email = jiri.travnicek@nubium.cz
 [core]
   editor = vim
-  excludesfile = ~/.gitignore
+	excludesfile = /Users/northys/.gitignore
   autocrlf = input
 [color]
   branch = auto
@@ -29,3 +29,9 @@
   dc = diff --cached
   l = log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit
   ulci=!FN=docs/releaseDescription/`date +%Y%m%d-%H%M`_`git rev-parse --abbrev-ref HEAD` && vi $FN && git add $FN && git commit
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
