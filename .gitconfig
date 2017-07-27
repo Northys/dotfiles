@@ -3,7 +3,7 @@
   email = jiri.travnicek@nubium.cz
 [core]
   editor = vim
-	excludesfile = /Users/northys/.gitignore
+	excludesfile = /home/northys/.gitignore
   autocrlf = input
 [color]
   branch = auto
